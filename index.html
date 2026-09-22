@@ -2,1156 +2,380 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="theme-color" content="#0b0806">
-  <meta name="description" content="منوی دیجیتال CAFE ROST">
-
-  <title>CAFE ROST | منوی دیجیتال</title>
+  <title>CAFE ROST | منوی کافه</title>
 
   <style>
-    :root {
-      --bg: #090705;
-      --bg-2: #110c09;
-      --card: #17100c;
-      --card-hover: #21160f;
-      --gold: #d1a354;
-      --gold-light: #e6c477;
-      --gold-dark: #8f6b31;
-      --text: #f3e6cf;
-      --text-soft: #bca98e;
-      --border: rgba(209, 163, 84, 0.22);
-      --border-strong: rgba(209, 163, 84, 0.45);
-      --shadow: rgba(0, 0, 0, 0.45);
-    }
-
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: #120d09;
+      color: #f5e7cf;
       min-height: 100vh;
-      background:
-        radial-gradient(circle at 50% -10%, rgba(209,163,84,.12), transparent 35%),
-        linear-gradient(180deg, #0d0907 0%, #090705 100%);
-      color: var(--text);
-      font-family:
-        Tahoma,
-        "Segoe UI",
-        Arial,
-        sans-serif;
-      overflow-x: hidden;
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: .025;
-      background-image:
-        linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px);
-      background-size: 40px 40px;
-    }
-
-    button,
-    input {
-      font: inherit;
-    }
-
-    button {
-      border: 0;
-      outline: 0;
-    }
-
-    .page {
-      width: min(100%, 760px);
-      margin: 0 auto;
-      padding: 20px 16px 45px;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* =========================
-       HEADER
-    ========================== */
-
-    .hero {
-      text-align: center;
-      padding: 20px 0 25px;
-    }
-
-    .logo-frame {
-      width: 126px;
-      height: 126px;
-      margin: 0 auto 19px;
-      border-radius: 50%;
-      padding: 5px;
-      position: relative;
-      background:
-        linear-gradient(145deg,
-          var(--gold-light),
-          var(--gold-dark),
-          var(--gold-light));
-      box-shadow:
-        0 0 0 1px rgba(255,255,255,.05),
-        0 12px 35px rgba(0,0,0,.55),
-        0 0 35px rgba(209,163,84,.12);
-    }
-
-    .logo-frame::after {
-      content: "";
-      position: absolute;
-      inset: 4px;
-      border-radius: 50%;
-      border: 1px solid rgba(255,255,255,.16);
-      pointer-events: none;
-    }
-
-    .logo-inner {
+    .container {
       width: 100%;
-      height: 100%;
+      max-width: 600px;
+      margin: auto;
+      padding: 25px 16px 40px;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .logo-box {
+      width: 145px;
+      height: 145px;
+      margin: 0 auto 18px;
+      border: 2px solid #c69a55;
       border-radius: 50%;
-      background: #120d0a;
       display: flex;
       align-items: center;
       justify-content: center;
+      background: #1b120c;
+      box-shadow:
+        0 0 20px rgba(198,154,85,0.15),
+        inset 0 0 20px rgba(198,154,85,0.08);
       overflow: hidden;
     }
 
-    .logo-inner img {
-      width: 91%;
-      height: 91%;
+    .logo-box img {
+      width: 88%;
+      height: 88%;
       object-fit: contain;
-      display: block;
     }
 
-    .brand {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(30px, 8vw, 43px);
-      letter-spacing: 7px;
-      color: var(--gold-light);
-      line-height: 1;
-      margin-right: -7px;
-      text-shadow: 0 2px 18px rgba(209,163,84,.12);
+    .title {
+      font-size: 29px;
+      letter-spacing: 4px;
+      color: #d5aa63;
+      font-weight: bold;
     }
 
-    .brand-subtitle {
-      margin-top: 12px;
-      color: var(--text-soft);
+    .subtitle {
+      margin-top: 8px;
+      color: #a9957d;
       font-size: 13px;
-      letter-spacing: 1px;
     }
 
-    .ornament {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin: 19px auto 0;
-      width: min(260px, 70%);
-    }
-
-    .ornament span {
+    .line {
+      width: 80px;
       height: 1px;
-      flex: 1;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        var(--gold-dark)
-      );
+      background: #c69a55;
+      margin: 17px auto;
     }
 
-    .ornament span:last-child {
-      background: linear-gradient(
-        90deg,
-        var(--gold-dark),
-        transparent
-      );
+    .welcome {
+      color: #ead9bd;
+      font-size: 14px;
+      line-height: 2;
     }
 
-    .ornament i {
-      width: 6px;
-      height: 6px;
-      transform: rotate(45deg);
-      background: var(--gold);
-      display: block;
-    }
-
-    /* =========================
-       SEARCH
-    ========================== */
-
-    .search-box {
-      margin: 5px 0 25px;
-      position: relative;
-    }
-
-    .search-box input {
-      width: 100%;
-      height: 54px;
-      border-radius: 15px;
-      border: 1px solid var(--border);
-      background: rgba(23,16,12,.88);
-      color: var(--text);
-      padding: 0 48px 0 48px;
-      outline: none;
-      transition: .25s ease;
-      box-shadow: 0 10px 25px rgba(0,0,0,.18);
-    }
-
-    .search-box input::placeholder {
-      color: #796b59;
-    }
-
-    .search-box input:focus {
-      border-color: var(--border-strong);
-      box-shadow:
-        0 0 0 3px rgba(209,163,84,.07),
-        0 12px 28px rgba(0,0,0,.25);
-    }
-
-    .search-icon {
-      position: absolute;
-      right: 17px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--gold);
-      font-size: 20px;
-      pointer-events: none;
-    }
-
-    .clear-search {
-      position: absolute;
-      left: 13px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 31px;
-      height: 31px;
-      border-radius: 50%;
-      background: rgba(209,163,84,.08);
-      color: var(--gold);
-      cursor: pointer;
-      display: none;
-      font-size: 17px;
-    }
-
-    /* =========================
-       CATEGORY
-    ========================== */
-
+    /* Categories */
     .categories {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+      display: grid;
+      gap: 14px;
+      margin-top: 25px;
     }
 
     .category {
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      background:
-        linear-gradient(
-          145deg,
-          rgba(28,19,14,.97),
-          rgba(16,11,8,.97)
-        );
-      overflow: hidden;
-      box-shadow:
-        0 9px 25px var(--shadow);
-      transition:
-        border-color .25s ease,
-        transform .25s ease,
-        box-shadow .25s ease;
+      position: relative;
+      background: linear-gradient(135deg, #21150e, #17100c);
+      border: 1px solid #5f4529;
+      border-radius: 16px;
+      padding: 22px 20px;
+      cursor: pointer;
+      transition: 0.25s;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     }
 
     .category:hover {
-      border-color: var(--border-strong);
+      transform: translateY(-2px);
+      border-color: #c69a55;
     }
 
-    .category-header {
-      width: 100%;
-      min-height: 72px;
-      padding: 15px 18px;
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      background: transparent;
-      color: var(--text);
-      cursor: pointer;
-      text-align: right;
+    .category h2 {
+      color: #d5aa63;
+      font-size: 18px;
+      margin-bottom: 7px;
     }
 
-    .category-icon {
-      width: 42px;
-      height: 42px;
-      flex: 0 0 42px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background:
-        linear-gradient(
-          145deg,
-          rgba(209,163,84,.16),
-          rgba(209,163,84,.045)
-        );
-      border: 1px solid rgba(209,163,84,.16);
-      font-size: 21px;
+    .category p {
+      color: #9f8c76;
+      font-size: 12px;
     }
 
-    .category-info {
-      flex: 1;
-      min-width: 0;
+    .arrow {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #c69a55;
+      font-size: 22px;
     }
 
-    .category-name {
-      color: var(--gold-light);
-      font-size: 15px;
-      font-weight: 700;
-      line-height: 1.5;
+    /* Menu pages */
+    .menu-page {
+      display: none;
     }
 
-    .category-count {
+    .menu-page.active {
       display: block;
-      color: #806f5b;
-      font-size: 11px;
-      margin-top: 2px;
     }
 
-    .category-arrow {
-      width: 31px;
-      height: 31px;
-      flex: 0 0 31px;
-      border-radius: 50%;
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold);
-      font-size: 17px;
-      transition: transform .3s ease, background .3s ease;
+    .back {
+      display: inline-block;
+      color: #c69a55;
+      margin-bottom: 22px;
+      cursor: pointer;
+      font-size: 14px;
     }
 
-    .category.open .category-arrow {
-      transform: rotate(180deg);
-      background: rgba(209,163,84,.08);
-    }
-
-    .category-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .4s cubic-bezier(.4,0,.2,1);
-    }
-
-    .items {
-      padding: 0 17px 10px;
+    .menu-title {
+      text-align: center;
+      color: #d5aa63;
+      font-size: 25px;
+      margin-bottom: 22px;
     }
 
     .item {
-      min-height: 52px;
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      border-top: 1px solid rgba(255,255,255,.045);
-      color: var(--text);
-      font-size: 14px;
-      line-height: 1.7;
-      animation: itemIn .3s ease both;
-    }
-
-    .item-dot {
-      width: 5px;
-      height: 5px;
-      flex: 0 0 5px;
-      border-radius: 50%;
-      background: var(--gold);
-      box-shadow: 0 0 7px rgba(209,163,84,.35);
+      background: #1b120c;
+      border: 1px solid #4d3824;
+      border-radius: 15px;
+      padding: 18px;
+      margin-bottom: 12px;
     }
 
     .item-name {
-      flex: 1;
+      color: #f0ddc0;
+      font-size: 16px;
+      font-weight: bold;
     }
 
-    /* =========================
-       NO RESULT
-    ========================== */
-
-    .no-result {
-      display: none;
-      text-align: center;
-      padding: 35px 20px;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      background: rgba(23,16,12,.8);
-      color: var(--text-soft);
+    .item-description {
+      color: #97836d;
+      font-size: 12px;
+      margin-top: 7px;
+      line-height: 1.8;
     }
 
-    .no-result-icon {
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
-
-    .no-result strong {
-      display: block;
-      color: var(--gold-light);
-      margin-bottom: 5px;
-    }
-
-    .no-result small {
-      color: #756653;
-    }
-
-    /* =========================
-       FOOTER
-    ========================== */
-
-    footer {
+    /* Footer */
+    .footer {
       text-align: center;
       margin-top: 35px;
-      padding-top: 10px;
-    }
-
-    .footer-line {
-      width: 100px;
-      height: 1px;
-      margin: 0 auto 15px;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        var(--gold-dark),
-        transparent
-      );
-    }
-
-    .footer-brand {
-      font-family: Georgia, serif;
-      color: var(--gold);
-      letter-spacing: 3px;
-      font-size: 14px;
-    }
-
-    .footer-text {
-      color: #665746;
-      font-size: 10px;
-      margin-top: 7px;
-    }
-
-    /* =========================
-       ANIMATIONS
-    ========================== */
-
-    @keyframes itemIn {
-      from {
-        opacity: 0;
-        transform: translateY(-4px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* =========================
-       MOBILE
-    ========================== */
-
-    @media (max-width: 480px) {
-
-      .page {
-        padding:
-          max(14px, env(safe-area-inset-top))
-          13px
-          35px;
-      }
-
-      .hero {
-        padding-top: 15px;
-      }
-
-      .logo-frame {
-        width: 112px;
-        height: 112px;
-      }
-
-      .brand {
-        font-size: 29px;
-        letter-spacing: 5px;
-        margin-right: -5px;
-      }
-
-      .brand-subtitle {
-        font-size: 12px;
-      }
-
-      .category-header {
-        min-height: 68px;
-        padding: 13px 14px;
-      }
-
-      .category-icon {
-        width: 39px;
-        height: 39px;
-        flex-basis: 39px;
-        font-size: 19px;
-      }
-
-      .category-name {
-        font-size: 14px;
-      }
-
-      .item {
-        font-size: 13.5px;
-      }
-    }
-
-    @media (min-width: 700px) {
-      .page {
-        padding-top: 35px;
-      }
-
-      .category-header {
-        padding-right: 22px;
-        padding-left: 22px;
-      }
-
-      .items {
-        padding-right: 23px;
-        padding-left: 23px;
-      }
+      padding-top: 20px;
+      border-top: 1px solid #382719;
+      color: #806e5a;
+      font-size: 11px;
+      line-height: 2;
     }
   </style>
 </head>
 
 <body>
 
-  <main class="page">
+  <div class="container">
 
-    <!-- HEADER -->
-    <header class="hero">
+    <!-- صفحه اصلی -->
+    <div id="home" class="menu-page active">
 
-      <div class="logo-frame">
-        <div class="logo-inner">
-          <img src="logo.png" alt="CAFE ROST Logo">
+      <header class="header">
+
+        <div class="logo-box">
+          <img src="logo.png" alt="CAFE ROST">
         </div>
+
+        <div class="title">CAFE ROST</div>
+
+        <div class="line"></div>
+
+        <div class="subtitle">CAFE • COFFEE • DESSERT</div>
+
+        <p class="welcome">
+          به منوی دیجیتال کافه راست خوش آمدید
+        </p>
+
+      </header>
+
+      <div class="categories">
+
+        <div class="category" onclick="openMenu('hot')">
+          <h2>☕ منوی گرم</h2>
+          <p>انواع قهوه و نوشیدنی‌های گرم</p>
+          <span class="arrow">‹</span>
+        </div>
+
+        <div class="category" onclick="openMenu('cold')">
+          <h2>🧊 منوی سرد</h2>
+          <p>نوشیدنی‌های خنک و سرد</p>
+          <span class="arrow">‹</span>
+        </div>
+
+        <div class="category" onclick="openMenu('dessert')">
+          <h2>🍰 دسر</h2>
+          <p>دسرهای ویژه کافه راست</p>
+          <span class="arrow">‹</span>
+        </div>
+
+        <div class="category" onclick="openMenu('breakfast')">
+          <h2>🍳 صبحانه</h2>
+          <p>صبحانه‌های مخصوص کافه راست</p>
+          <span class="arrow">‹</span>
+        </div>
+
       </div>
 
-      <h1 class="brand">CAFE ROST</h1>
-
-      <p class="brand-subtitle">
-        منوی دیجیتال کافه
-      </p>
-
-      <div class="ornament">
-        <span></span>
-        <i></i>
-        <span></span>
+      <div class="footer">
+        CAFE ROST<br>
+        لحظات خوب، طعم خوب
       </div>
-
-    </header>
-
-
-    <!-- SEARCH -->
-    <div class="search-box">
-
-      <span class="search-icon">⌕</span>
-
-      <input
-        id="searchInput"
-        type="search"
-        placeholder="جستجو در منو..."
-        autocomplete="off"
-        enterkeyhint="search"
-      >
-
-      <button
-        id="clearSearch"
-        class="clear-search"
-        type="button"
-        aria-label="پاک کردن جستجو"
-      >
-        ×
-      </button>
 
     </div>
 
 
-    <!-- CATEGORIES -->
-    <div class="categories" id="categories">
+    <!-- منوی گرم -->
+    <div id="hot" class="menu-page">
 
+      <span class="back" onclick="goHome()">→ بازگشت به منو</span>
 
-      <!-- COFFEE -->
-      <section class="category">
+      <h1 class="menu-title">منوی گرم</h1>
 
-        <button class="category-header" type="button">
-
-          <span class="category-icon">☕</span>
-
-          <span class="category-info">
-            <span class="category-name">
-              COFFEE | قهوه
-            </span>
-            <span class="category-count">
-              ۱۴ آیتم
-            </span>
-          </span>
-
-          <span class="category-arrow">
-            ⌄
-          </span>
-
-        </button>
-
-        <div class="category-content">
-
-          <div class="items">
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">اسپرسو سینگل</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">اسپرسو دبل</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">لاته سینگل</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">لاته دبل</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">لاته کاراملی</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">لاته توت‌فرنگی</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">لاته وانیل</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">لاته فندق</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">موکا</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">کارامل ماکیاتو</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">کاپوچینو</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">هات چاکلت</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">وایت چاکلت</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">آمریکانو سینگل / دبل</span>
-            </div>
-
-          </div>
-
+      <div class="item">
+        <div class="item-name">اسپرسو</div>
+        <div class="item-description">
+          قهوه اسپرسو با عصاره‌گیری حرفه‌ای
         </div>
+      </div>
 
-      </section>
-
-
-      <!-- COLD COFFEE -->
-      <section class="category">
-
-        <button class="category-header" type="button">
-
-          <span class="category-icon">🧊</span>
-
-          <span class="category-info">
-            <span class="category-name">
-              COLD COFFEE | قهوه سرد
-            </span>
-            <span class="category-count">
-              ۸ آیتم
-            </span>
-          </span>
-
-          <span class="category-arrow">
-            ⌄
-          </span>
-
-        </button>
-
-        <div class="category-content">
-
-          <div class="items">
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">آیس لاته</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">آیس موکا</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">آیس آمریکانو</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">آیس لاته وانیل</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">آیس لاته فندق</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">آیس لاته توت‌فرنگی</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">آیس کارامل ماکیاتو</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">آفوگاتو</span>
-            </div>
-
-          </div>
-
+      <div class="item">
+        <div class="item-name">آمریکانو</div>
+        <div class="item-description">
+          اسپرسو همراه با آب داغ
         </div>
+      </div>
 
-      </section>
-
-
-      <!-- TEA -->
-      <section class="category">
-
-        <button class="category-header" type="button">
-
-          <span class="category-icon">🫖</span>
-
-          <span class="category-info">
-            <span class="category-name">
-              TEA | چای
-            </span>
-            <span class="category-count">
-              ۶ آیتم
-            </span>
-          </span>
-
-          <span class="category-arrow">
-            ⌄
-          </span>
-
-        </button>
-
-        <div class="category-content">
-
-          <div class="items">
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">چای سیاه</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">چای انگلیسی</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">چای زعفران</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">چای ترش</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">چای ماسالا</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">چای کرک</span>
-            </div>
-
-          </div>
-
+      <div class="item">
+        <div class="item-name">کاپوچینو</div>
+        <div class="item-description">
+          اسپرسو، شیر بخار داده شده و فوم شیر
         </div>
+      </div>
 
-      </section>
-
-
-      <!-- HERBAL -->
-      <section class="category">
-
-        <button class="category-header" type="button">
-
-          <span class="category-icon">🌿</span>
-
-          <span class="category-info">
-            <span class="category-name">
-              HERBAL TEA | دمنوش
-            </span>
-            <span class="category-count">
-              ۵ آیتم
-            </span>
-          </span>
-
-          <span class="category-arrow">
-            ⌄
-          </span>
-
-        </button>
-
-        <div class="category-content">
-
-          <div class="items">
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">دمنوش گل گاوزبان</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">دمنوش پونه</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">دمنوش میکس</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">دمنوش بهارنارنج</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">دمنوش بابونه</span>
-            </div>
-
-          </div>
-
+      <div class="item">
+        <div class="item-name">لاته</div>
+        <div class="item-description">
+          اسپرسو و شیر با بافت لطیف
         </div>
-
-      </section>
-
-
-      <!-- CAKES -->
-      <section class="category">
-
-        <button class="category-header" type="button">
-
-          <span class="category-icon">🍰</span>
-
-          <span class="category-info">
-            <span class="category-name">
-              CAKES | کیک
-            </span>
-            <span class="category-count">
-              ۸ آیتم
-            </span>
-          </span>
-
-          <span class="category-arrow">
-            ⌄
-          </span>
-
-        </button>
-
-        <div class="category-content">
-
-          <div class="items">
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">چیزکیک شکلاتی</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">چیزکیک کاراملی</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">چیزکیک توت‌فرنگی</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">چیزکیک لوتوس</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">کیک خامه‌ای موزی</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">کیک خیس شکلاتی</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">کیک هویج گردو</span>
-            </div>
-
-            <div class="item">
-              <span class="item-dot"></span>
-              <span class="item-name">رولت</span>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
+      </div>
 
     </div>
 
 
-    <!-- NO RESULT -->
-    <div class="no-result" id="noResult">
+    <!-- منوی سرد -->
+    <div id="cold" class="menu-page">
 
-      <div class="no-result-icon">☕</div>
+      <span class="back" onclick="goHome()">→ بازگشت به منو</span>
 
-      <strong>موردی پیدا نشد</strong>
+      <h1 class="menu-title">منوی سرد</h1>
 
-      <small>
-        عبارت دیگری را جستجو کنید.
-      </small>
+      <div class="item">
+        <div class="item-name">آیس آمریکانو</div>
+        <div class="item-description">
+          اسپرسو، آب و یخ
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-name">آیس لاته</div>
+        <div class="item-description">
+          اسپرسو، شیر سرد و یخ
+        </div>
+      </div>
 
     </div>
 
 
-    <!-- FOOTER -->
-    <footer>
+    <!-- دسر -->
+    <div id="dessert" class="menu-page">
 
-      <div class="footer-line"></div>
+      <span class="back" onclick="goHome()">→ بازگشت به منو</span>
 
-      <div class="footer-brand">
-        CAFE ROST
+      <h1 class="menu-title">دسر</h1>
+
+      <div class="item">
+        <div class="item-name">تیرامیسو</div>
+        <div class="item-description">
+          دسر کلاسیک ایتالیایی با قهوه و کرم ماسکارپونه
+        </div>
       </div>
 
-      <div class="footer-text">
-        Coffee • Tea • Cake
+    </div>
+
+
+    <!-- صبحانه -->
+    <div id="breakfast" class="menu-page">
+
+      <span class="back" onclick="goHome()">→ بازگشت به منو</span>
+
+      <h1 class="menu-title">صبحانه</h1>
+
+      <div class="item">
+        <div class="item-name">صبحانه مخصوص</div>
+        <div class="item-description">
+          صبحانه ویژه کافه راست
+        </div>
       </div>
 
-    </footer>
+      <div class="item">
+        <div class="item-name">املت</div>
+        <div class="item-description">
+          املت تازه با مواد اولیه باکیفیت
+        </div>
+      </div>
 
-  </main>
+    </div>
+
+  </div>
 
 
   <script>
+    function openMenu(menu) {
 
-    /* =========================
-       CATEGORY ACCORDION
-    ========================== */
-
-    const categories =
-      document.querySelectorAll(".category");
-
-    categories.forEach(category => {
-
-      const header =
-        category.querySelector(".category-header");
-
-      const content =
-        category.querySelector(".category-content");
-
-      header.addEventListener("click", () => {
-
-        const isOpen =
-          category.classList.contains("open");
-
-        categories.forEach(other => {
-
-          other.classList.remove("open");
-
-          const otherContent =
-            other.querySelector(".category-content");
-
-          otherContent.style.maxHeight = null;
-
-        });
-
-        if (!isOpen) {
-
-          category.classList.add("open");
-
-          content.style.maxHeight =
-            content.scrollHeight + "px";
-
-        }
-
+      document.querySelectorAll('.menu-page').forEach(function(page) {
+        page.classList.remove('active');
       });
 
-    });
+      document.getElementById(menu).classList.add('active');
 
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
 
-    /* =========================
-       SEARCH
-    ========================== */
+    function goHome() {
 
-    const searchInput =
-      document.getElementById("searchInput");
-
-    const clearSearch =
-      document.getElementById("clearSearch");
-
-    const noResult =
-      document.getElementById("noResult");
-
-    searchInput.addEventListener("input", function () {
-
-      const query =
-        this.value.trim().toLowerCase();
-
-      clearSearch.style.display =
-        query ? "block" : "none";
-
-      let totalResults = 0;
-
-      categories.forEach(category => {
-
-        const items =
-          category.querySelectorAll(".item");
-
-        let categoryResults = 0;
-
-        items.forEach(item => {
-
-          const name =
-            item.querySelector(".item-name")
-            .textContent
-            .toLowerCase();
-
-          const match =
-            name.includes(query);
-
-          item.style.display =
-            match ? "flex" : "none";
-
-          if (match) {
-            categoryResults++;
-          }
-
-        });
-
-        if (query) {
-
-          if (categoryResults > 0) {
-
-            category.style.display = "block";
-
-            category.classList.add("open");
-
-            const content =
-              category.querySelector(".category-content");
-
-            content.style.maxHeight =
-              content.scrollHeight + "px";
-
-          } else {
-
-            category.style.display = "none";
-
-          }
-
-        } else {
-
-          category.style.display = "block";
-
-          category.classList.remove("open");
-
-          const content =
-            category.querySelector(".category-content");
-
-          content.style.maxHeight = null;
-
-          items.forEach(item => {
-            item.style.display = "flex";
-          });
-
-        }
-
-        totalResults += categoryResults;
-
+      document.querySelectorAll('.menu-page').forEach(function(page) {
+        page.classList.remove('active');
       });
 
-      noResult.style.display =
-        query && totalResults === 0
-          ? "block"
-          : "none";
+      document.getElementById('home').classList.add('active');
 
-    });
-
-
-    /* =========================
-       CLEAR SEARCH
-    ========================== */
-
-    clearSearch.addEventListener("click", () => {
-
-      searchInput.value = "";
-
-      searchInput.dispatchEvent(
-        new Event("input")
-      );
-
-      searchInput.focus();
-
-    });
-
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
   </script>
 
 </body>
